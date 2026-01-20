@@ -27,6 +27,15 @@ if exist "%RUNLOGFILE%" for /f "usebackq delims=" %%A in ("%RUNLOGFILE%") do set
 :: Clean up spaces
 set "lastRun=%lastRun: =%"
 
+:: Check if you have internet connection
+ping -n 1 8.8.8.8 >nul && ping -n 1 google.com >nul
+
+if %errorlevel%==0 (
+    echo Internet is working perfectly.
+) else (
+    exit /b
+)
+
 :: Skip if already ran today
 if "%lastRun%"=="%TODAYDATE%" exit /b
 
