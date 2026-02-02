@@ -1,4 +1,3 @@
-git check
 **Download and Sync Youtube Playlists to Itunes Playlists for IPHONE/IPAD OFFLINE SONGS**
   
 **Mandatory: Install itunes from microsoft store.**
